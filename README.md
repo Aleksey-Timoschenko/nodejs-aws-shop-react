@@ -1,21 +1,20 @@
 # React-shop-cloudfront
 
-This is frontend starter project for nodejs-aws mentoring program. It uses the following technologies:
+## **TASK 2**
+1. Manually uploaded to s3
+- s3 static website link - http://rs-site-aws-bucket-manually.s3-website.eu-north-1.amazonaws.com/
+2. Manually created cloudfront distribution + invalidation for cloudfront
+- cloudfront link - https://d3musmbuftn5qp.cloudfront.net/
+- s3 link - http://rs-site-aws-bucket-manually-not-public.s3-website.eu-north-1.amazonaws.com/ (such static site does not exist, because I restricted access)
+3. Set up infrastructure with aws cdk
+- cloudfront link - https://d1akx69qkmi8fp.cloudfront.net/
 
-- [Vite](https://vitejs.dev/) as a project bundler
-- [React](https://beta.reactjs.org/) as a frontend framework
-- [React-router-dom](https://reactrouterdotcom.fly.dev/) as a routing library
-- [MUI](https://mui.com/) as a UI framework
-- [React-query](https://react-query-v3.tanstack.com/) as a data fetching library
-- [Formik](https://formik.org/) as a form library
-- [Yup](https://github.com/jquense/yup) as a validation schema
-- [Vitest](https://vitest.dev/) as a test runner
-- [MSW](https://mswjs.io/) as an API mocking library
-- [Eslint](https://eslint.org/) as a code linting tool
-- [Prettier](https://prettier.io/) as a code formatting tool
-- [TypeScript](https://www.typescriptlang.org/) as a type checking tool
+All 3 tasks were finished 
+1. Manually create s3 bucket, upload site content and use s3 bucket as static site 
+2. Manually create cloudfront distribution and connect with s3 bucket + manually create invalidation for cloudfront distribution
+3. Use aws cdk for creating s3 bucket and cloudfront distribution + connect them between each other
 
-## Available Scripts
+## Useful Scripts
 
 ### `start`
 
@@ -25,14 +24,8 @@ Starts the project in dev mode with mocked API on local environment.
 
 Builds the project for production in `dist` folder.
 
-### `preview`
+### `cdk:bootstrap`
 
-Starts the project in production mode on local environment.
+Connect cdk with you aws account
 
-### `test`, `test:ui`, `test:coverage`
-
-Runs tests in console, in browser or with coverage.
-
-### `lint`, `prettier`
-
-Runs linting and formatting for all files in `src` folder.
+### `cdk:deploy`
