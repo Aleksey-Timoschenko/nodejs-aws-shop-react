@@ -14,6 +14,17 @@ All 3 tasks were finished
 2. Manually create cloudfront distribution and connect with s3 bucket + manually create invalidation for cloudfront distribution
 3. Use aws cdk for creating s3 bucket and cloudfront distribution + connect them between each other
 
+## **TASK 3**
+Within this task path for products path was updated to suit our new endpoints
+- /products
+- /products/{id}
+
+To check data from new endpoints
+
+1. Open https://d1akx69qkmi8fp.cloudfront.net/ (At the main page you will find data which is loaded from /products endpoint)
+2. Then click on Manage products and on opened table choose any product and click manage
+3. Page for particular product will be opened, data for this page is loaded from /products/{id} endpoint
+
 ## Useful Scripts
 
 ### `start`
